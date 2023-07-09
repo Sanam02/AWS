@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Simple S3 bucket
+Resources:
+  FirstS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: first-s3-bucket-YourBucketname1
+
+  SecondS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: second-s3-bucket-YourBucketName2
+
+  ThirdS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: third-s3-bucket-YourBucketname3

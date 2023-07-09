@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: IAM users
+Resources:
+
+  AdminIAMUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: admin-user-cf
+      Groups: 
+        - AdminGroup
+
+  MonitoringIAMUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: monitoring-user-cf
+      Groups: 
+        - MonitoringGroup
+
+  AdminGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: AdminGroup
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AdministratorAccess
+
+  MonitoringGroup:
+    Type: AWS::IAM::Group
+    Properties:
+      GroupName: MonitoringGroup
+      ManagedPolicyArns: 
+        - arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
