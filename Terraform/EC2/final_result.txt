@@ -1,0 +1,3 @@
+'Terraform destroyed code' 
+'web server destroyed' 
+'web server destroyed' 
